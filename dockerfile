@@ -9,10 +9,12 @@ RUN         apk add --update --no-cache curl ca-certificates openssl git tar bas
             && adduser -D -h /home/container container
 
 ADD         . /home/container/
-USER        container
-ENV         USER=container HOME=/home/container
+USER        root
+ENV         USER=root HOME=/home/container
 
 WORKDIR     /home/container
+
+VOLUME      /data/mindustry
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
