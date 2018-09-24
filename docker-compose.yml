@@ -4,7 +4,8 @@ services:
   mindustry:
     image: viviv/mindustry
     ports:
-      - '6567:6567/tcp'
-      - '6567:6567/udp'
-    stdin_open: true
+      - '6565:6567/tcp'
+      - '6565:6567/udp'
     tty: true
+    stdin_open: true
+    restart: always
