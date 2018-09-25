@@ -5,7 +5,9 @@ LABEL       author="ViViV_" maintainer="sysadmin@whiteshield.ch"
 EXPOSE      6567/TCP
 EXPOSE      6567/UDP
 
-RUN         apk add --update --no-cache curl ca-certificates openssl git tar bash sqlite 
+RUN         apk add --update --no-cache curl ca-certificates openssl git \
+            tar bash  
+RUN         apk add --update --no-cache sqlite 
 
 RUN         adduser -D -h /var/lib/mindustry mindustry
 
