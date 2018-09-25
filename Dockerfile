@@ -1,6 +1,7 @@
 FROM        openjdk:8-jdk-alpine
 
 LABEL       author="ViViV_" maintainer="sysadmin@whiteshield.ch"
+LABEL       author="thehuntedpie" maintainer="thehuntedpie@gmail.com"
 
 EXPOSE      6567/TCP
 EXPOSE      6567/UDP
