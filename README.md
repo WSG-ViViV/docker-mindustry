@@ -8,7 +8,7 @@ Host Server : `docker-compose up -d`
 
 ## Docker Commands
 
-Host Server : `docker run --name mindustry -ti -p 6567:6567/tcp -p 6567:6567/udp viviv/mindustry`
+Host Server : `docker run --name mindustry -i -p 6567:6567/tcp -p 6567:6567/udp viviv/mindustry`
 
 # Manage Mindustry Console
 
