@@ -15,4 +15,4 @@ done
 sleep 1
 
 echo "$LOGS"
-kill -9 $PID
+{kill $PID} 2>/dev/null
