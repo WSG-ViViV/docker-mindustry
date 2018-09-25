@@ -6,8 +6,10 @@ services:
     container_name: "mindustry_server"
     hostname: "mindustry-server"
     ports:
-      - "6567:6567/tcp"
+      - "6567:6567/tcp" #host-port:internal-port
       - "6567:6567/udp"
+    environment:
+      - "JAVA_OPTS=-Xms1G -Xmx2G" #set memory limits
     tty: true
     stdin_open: true
     restart: always
