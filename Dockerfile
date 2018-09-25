@@ -5,10 +5,11 @@ LABEL       author="ViViV_" maintainer="sysadmin@whiteshield.ch"
 EXPOSE      6567/TCP
 EXPOSE      6567/UDP
 
-RUN         apk add --update --no-cache curl ca-certificates openssl git tar bash sqlite \
-            && adduser -D -h /var/lib/mindustry mindustry
+RUN         apk add --update --no-cache curl ca-certificates openssl git tar bash sqlite 
 
-ADD         . /var/lib/mindustry
+RUN         adduser -D -h /var/lib/mindustry mindustry
+
+COPY        Mindustry-server-4.0-alpha-56.jar /usr/local/share/mindustry/server.jar
 
 USER        root
 
