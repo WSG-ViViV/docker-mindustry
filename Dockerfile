@@ -18,4 +18,4 @@ VOLUME      /var/lib/mindustry/.mindustry
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
-CMD         ["/bin/bash", "/entrypoint.sh"]
+ENTRYPOINT  /entrypoint.sh
