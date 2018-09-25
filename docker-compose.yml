@@ -10,6 +10,8 @@ services:
       - "6567:6567/udp"
     environment:
       - "JAVA_OPTS=-Xms1G -Xmx2G" #set memory limits
+    command:
+      - "load 1,host" # load save 1 and then host. see help for options
     tty: true
     stdin_open: true
     restart: always

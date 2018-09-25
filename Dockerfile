@@ -23,4 +23,4 @@ VOLUME      /var/lib/mindustry/.mindustry
 COPY        ./docker-entrypoint.sh /
 
 ENTRYPOINT  ["/docker-entrypoint.sh"]
-CMD         ["default"]
+CMD         ["host"]
