@@ -20,4 +20,11 @@ ATTENTION! The terminal will not have any indicators that you have connected to 
 ### Detach Console
 To detach the console type Ctrl-C . The server should remain running.
 
+### Console Commands
+The script 'console.sh' lets you run commands in the console from outside the container with output.
+
+usage: `./console.sh status`
+
+WARNING! This script seems to perform well but is not very well tested. Use with caution!
+
 ### Enjoy !!
