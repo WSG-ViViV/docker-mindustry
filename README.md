@@ -10,10 +10,13 @@ Host Server : `docker-compose up -d`
 
 Host Server : `docker run --name mindustry -ti -p 6567:6567/tcp -p 6567:6567/udp viviv/mindustry`
 
-# Manage Mindustry console
-Attach terminal `docker attach mindustry_server`
+# Manage Mindustry Console
 
-To detach the tty without shuttding down the server, 
+## Attach Console
+Attach terminal with `docker attach mindustry_server`
+
+### Detach Console
+To detach the tty without shutting down the server, 
 use the escape sequence Ctrl-p + Ctrl-q
 
 ### Enjoy !!
