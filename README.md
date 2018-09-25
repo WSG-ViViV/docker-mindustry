@@ -13,10 +13,11 @@ Host Server : `docker run --name mindustry -ti -p 6567:6567/tcp -p 6567:6567/udp
 # Manage Mindustry Console
 
 ## Attach Console
-Attach terminal with `docker attach mindustry_server`
+Attach terminal with `docker attach --sig-proxy=false mindustry_server`
+
+ATTENTION! The terminal will not have any indicators that you have connected to the console. Just type help to get started.
 
 ### Detach Console
-To detach the tty without shutting down the server, 
-use the escape sequence Ctrl-p + Ctrl-q
+To detach the console type Ctrl-C . The server should remain running.
 
 ### Enjoy !!
