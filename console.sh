@@ -1,8 +1,18 @@
-#!/bin/bash -x
+#!/bin/bash 
 COMMAND=${@};
 CONTAINER=mindustry_server; 
 DATE=`date -Iseconds`;
 
 echo "$COMMAND" | docker attach $CONTAINER & 
-sleep 1;
-docker logs --since "$DATE" $CONTAINER
+PID=$$
+
+# reasonably speaking, logs dont happen til action is done
+while [ "$LOGS" == "" ]; do
+    LOGS=$(docker logs --since "$DATE" $CONTAINER)
+done
+
+# sleep just in case stuff is still going on
+sleep 1
+
+echo "$LOGS"
+kill -9 $PID
