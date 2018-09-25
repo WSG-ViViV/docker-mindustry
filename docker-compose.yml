@@ -10,4 +10,4 @@ services:
     stdin_open: true
     restart: always
     volumes:
-      - "/data/mindustry:/root/.mindustry"
+      - "/data/mindustry:/var/lib/mindustry/.mindustry"

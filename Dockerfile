@@ -6,15 +6,15 @@ EXPOSE      6567/TCP
 EXPOSE      6567/UDP
 
 RUN         apk add --update --no-cache curl ca-certificates openssl git tar bash sqlite \
-            && adduser -D -h /home/container container
+            && adduser -D -h /var/lib/mindustry mindustry
 
-ADD         . /home/container/
+ADD         . /var/lib/mindustry
+
 USER        root
-ENV         USER=root HOME=/home/container
 
-WORKDIR     /home/container
+WORKDIR     /var/lib/mindustry
 
-VOLUME      /data/mindustry
+VOLUME      /var/lib/mindustry/.mindustry
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
