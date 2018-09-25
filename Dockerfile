@@ -17,7 +17,7 @@ WORKDIR     /var/lib/mindustry
 
 VOLUME      /var/lib/mindustry/.mindustry
 
-COPY ./docker-entrypoint.sh /
+COPY        ./docker-entrypoint.sh /
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["default"]
+ENTRYPOINT  ["/docker-entrypoint.sh"]
+CMD         ["default"]
