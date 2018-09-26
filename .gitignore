@@ -1,0 +1,8 @@
+# ignore swp files
+*.sw[g-p]
+
+# ignore .env file
+.env
+
+# ignore jar files
+*.jar
